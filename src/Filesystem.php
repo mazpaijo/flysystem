@@ -46,6 +46,26 @@ class Filesystem implements FilesystemInterface
     {
         return $this->adapter;
     }
+    
+    /**
+     * Get the presigned Url.
+     *
+     * @return string
+     */
+    public function getPresignedUrl($path,$expiration = "+20 minutes")
+    {
+        $location = $this->applyPathPrefix($path);
+        $command = $this->s3Client->getCommand(
+            'getObject',
+            [
+                'Bucket' => $this->bucket,
+                'Key'    => $location,
+            ]
+        );
+        $request= $this->s3Client->createPresignedRequest($command,$expiration);
+
+        return (string) $request->getUri();
+    }
 
     /**
      * @inheritdoc
