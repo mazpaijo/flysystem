@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
 use ErrorException;
-use League\Flysystem\Config;
+use Mazpaijo\Flysystem\Config;
 use PHPUnit\Framework\TestCase;
 
 function ftp_systype($connection)
@@ -727,7 +727,7 @@ class FtpTests extends TestCase
 
     /**
      * @depends testInstantiable
-     * @expectedException \League\Flysystem\NotSupportedException
+     * @expectedException \Mazpaijo\Flysystem\NotSupportedException
      */
     public function testItThrowsAnExceptionWhenAnInvalidSystemTypeIsSet()
     {

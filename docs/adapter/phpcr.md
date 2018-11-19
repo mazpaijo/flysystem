@@ -16,7 +16,7 @@ for more on choosing your implementation.
 Assuming you go with jackalope-doctrine-dbal, do:
 
 ```bash
-composer require jackalope/jackalope-doctrine-dbal league/flysystem-phpcr
+composer require jackalope/jackalope-doctrine-dbal Mazpaijo/flysystem-phpcr
 ```
 
 ## Usage
@@ -28,8 +28,8 @@ this will look like this for example:
 use Doctrine\DBAL\Driver\Connection;
 use Doctrine\DBAL\DriverManager;
 use Jackalope\RepositoryFactoryDoctrineDBAL;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Phpcr\PhpcrAdapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Phpcr\PhpcrAdapter;
 use PHPCR\SimpleCredentials;
 
 $connection = DriverManager::getConnection([

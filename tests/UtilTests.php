@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem;
+namespace Mazpaijo\Flysystem;
 
 use PHPUnit\Framework\TestCase;
 
@@ -62,9 +62,9 @@ class UtilTests extends TestCase
 
     public function testEnsureConfig()
     {
-        $this->assertInstanceOf('League\Flysystem\Config', Util::ensureConfig([]));
-        $this->assertInstanceOf('League\Flysystem\Config', Util::ensureConfig(null));
-        $this->assertInstanceOf('League\Flysystem\Config', Util::ensureConfig(new Config()));
+        $this->assertInstanceOf('Mazpaijo\Flysystem\Config', Util::ensureConfig([]));
+        $this->assertInstanceOf('Mazpaijo\Flysystem\Config', Util::ensureConfig(null));
+        $this->assertInstanceOf('Mazpaijo\Flysystem\Config', Util::ensureConfig(new Config()));
     }
 
     /**

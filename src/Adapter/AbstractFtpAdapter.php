@@ -1,12 +1,12 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
 use DateTime;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
-use League\Flysystem\NotSupportedException;
-use League\Flysystem\SafeStorage;
+use Mazpaijo\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\NotSupportedException;
+use Mazpaijo\Flysystem\SafeStorage;
 use RuntimeException;
 
 abstract class AbstractFtpAdapter extends AbstractAdapter

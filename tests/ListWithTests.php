@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Plugin\ListWith;
+use Mazpaijo\Flysystem\Plugin\ListWith;
 use PHPUnit\Framework\TestCase;
 
 class ListWithTests extends TestCase
@@ -11,7 +11,7 @@ class ListWithTests extends TestCase
 
     public function testHandle()
     {
-        $prophecy = $this->prophesize('League\Flysystem\Filesystem');
+        $prophecy = $this->prophesize('Mazpaijo\Flysystem\Filesystem');
         $prophecy->listContents('', true)->willReturn([
            ['path' => 'path.txt', 'type' => 'file'],
         ]);
@@ -29,7 +29,7 @@ class ListWithTests extends TestCase
 
     public function testInvalidInput()
     {
-        $prophecy = $this->prophesize('League\Flysystem\Filesystem');
+        $prophecy = $this->prophesize('Mazpaijo\Flysystem\Filesystem');
         $prophecy->listContents('', true)->willReturn([
             ['path' => 'path.txt', 'type' => 'file'],
         ]);

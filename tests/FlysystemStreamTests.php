@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Filesystem;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 
@@ -11,9 +11,9 @@ class FlysystemStreamTests extends TestCase
     public function testWriteStream()
     {
         $stream = tmpfile();
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('Mazpaijo\Flysystem\AdapterInterface');
         $adapter->has('file.txt')->willReturn(false)->shouldBeCalled();
-        $adapter->writeStream('file.txt', $stream, Argument::type('League\Flysystem\Config'))
+        $adapter->writeStream('file.txt', $stream, Argument::type('Mazpaijo\Flysystem\Config'))
             ->willReturn(['path' => 'file.txt'], false)
             ->shouldBeCalled();
         $filesystem = new Filesystem($adapter->reveal());
@@ -26,17 +26,17 @@ class FlysystemStreamTests extends TestCase
      */
     public function testWriteStreamFail()
     {
-        $filesystem = new Filesystem($this->createMock('League\Flysystem\AdapterInterface'));
+        $filesystem = new Filesystem($this->createMock('Mazpaijo\Flysystem\AdapterInterface'));
         $filesystem->writeStream('file.txt', 'not a resource');
     }
 
     public function testUpdateStream()
     {
         $stream = tmpfile();
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('Mazpaijo\Flysystem\AdapterInterface');
         $adapter->has('file.txt')->willReturn(true)->shouldBeCalled();
 
-        $adapter->updateStream('file.txt', $stream, Argument::type('League\Flysystem\Config'))
+        $adapter->updateStream('file.txt', $stream, Argument::type('Mazpaijo\Flysystem\Config'))
             ->willReturn(['path' => 'file.txt'], false)
             ->shouldBeCalled();
 
@@ -51,13 +51,13 @@ class FlysystemStreamTests extends TestCase
      */
     public function testUpdateStreamFail()
     {
-        $filesystem = new Filesystem($this->createMock('League\Flysystem\AdapterInterface'));
+        $filesystem = new Filesystem($this->createMock('Mazpaijo\Flysystem\AdapterInterface'));
         $filesystem->updateStream('file.txt', 'not a resource');
     }
 
     public function testReadStream()
     {
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('Mazpaijo\Flysystem\AdapterInterface');
         $adapter->has(Argument::type('string'))->willReturn(true)->shouldBeCalled();
         $stream = tmpfile();
         $adapter->readStream('file.txt')->willReturn(['stream' => $stream])->shouldBeCalled();

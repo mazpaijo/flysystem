@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Util;
+namespace Mazpaijo\Flysystem\Util;
 
-use League\Flysystem\Util;
+use Mazpaijo\Flysystem\Util;
 
 /**
  * @internal

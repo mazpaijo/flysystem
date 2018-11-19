@@ -8,7 +8,7 @@ title: Rackspace Adapter
 ## Installation
 
 ```bash
-composer require league/flysystem-rackspace
+composer require Mazpaijo/flysystem-rackspace
 ```
 
 ## Usage
@@ -16,8 +16,8 @@ composer require league/flysystem-rackspace
 ```php
 use OpenCloud\OpenStack;
 use OpenCloud\Rackspace;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Rackspace\RackspaceAdapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Rackspace\RackspaceAdapter;
 
 $client = new OpenStack(Rackspace::UK_IDENTITY_ENDPOINT, [
     'username' => ':username',

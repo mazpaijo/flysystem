@@ -1,9 +1,9 @@
 <?php
 
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\MountManager;
-use League\Flysystem\Stub\FilesystemSpy;
+use Mazpaijo\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\MountManager;
+use Mazpaijo\Flysystem\Stub\FilesystemSpy;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 
@@ -18,7 +18,7 @@ class MountManagerTests extends TestCase
 
     public function testConstructorInjection()
     {
-        $mock = $this->createMock('League\Flysystem\FilesystemInterface');
+        $mock = $this->createMock('Mazpaijo\Flysystem\FilesystemInterface');
         $manager = new MountManager([
             'prefix' => $mock,
         ]);
@@ -31,7 +31,7 @@ class MountManagerTests extends TestCase
     public function testInvalidPrefix()
     {
         $manager = new MountManager();
-        $manager->mountFilesystem(false, $this->createMock('League\Flysystem\FilesystemInterface'));
+        $manager->mountFilesystem(false, $this->createMock('Mazpaijo\Flysystem\FilesystemInterface'));
     }
 
     /**
@@ -65,8 +65,8 @@ class MountManagerTests extends TestCase
     public function testCopyBetweenFilesystems()
     {
         $manager = new MountManager();
-        $fs1 = $this->prophesize('League\Flysystem\FilesystemInterface');
-        $fs2 = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs1 = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
+        $fs2 = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs1->reveal());
         $manager->mountFilesystem('fs2', $fs2->reveal());
 
@@ -98,11 +98,11 @@ class MountManagerTests extends TestCase
 
     public function testMoveBetweenFilesystems()
     {
-        $manager = $this->getMockBuilder('League\Flysystem\MountManager')
+        $manager = $this->getMockBuilder('Mazpaijo\Flysystem\MountManager')
             ->setMethods(['copy', 'delete'])
             ->getMock();
-        $fs1 = $this->prophesize('League\Flysystem\FilesystemInterface');
-        $fs2 = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs1 = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
+        $fs2 = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs1->reveal());
         $manager->mountFilesystem('fs2', $fs2->reveal());
 
@@ -123,7 +123,7 @@ class MountManagerTests extends TestCase
     public function testMoveSameFilesystems()
     {
         $manager = new MountManager();
-        $fs = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs->reveal());
 
         $config = ['visibility' => 'private'];
@@ -136,7 +136,7 @@ class MountManagerTests extends TestCase
 
     protected function mockFilesystem()
     {
-        $mock = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $mock = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
         $mock->listContents(Argument::type('string'), false)->willReturn([
            ['path' => 'path.txt', 'type' => 'file'],
            ['path' => 'dirname/path.txt', 'type' => 'file'],
@@ -171,7 +171,7 @@ class MountManagerTests extends TestCase
     {
         $manager = new MountManager();
         $response = ['path' => 'file.ext', 'timestamp' => time()];
-        $mock = $this->getMockBuilder('League\Flysystem\Filesystem')->disableOriginalConstructor()->getMock();
+        $mock = $this->getMockBuilder('Mazpaijo\Flysystem\Filesystem')->disableOriginalConstructor()->getMock();
         $mock->method('__call')->with('listWith', [['timestamp'], 'file.ext', false])->willReturn($response);
         $manager->mountFilesystem('prot', $mock);
         $this->assertEquals($response, $manager->listWith(['timestamp'], 'prot://file.ext', false));
@@ -193,7 +193,7 @@ class MountManagerTests extends TestCase
     public function testMountSchemaTypes($schema)
     {
         $manager = new MountManager();
-        $mock = $this->getMockBuilder('League\Flysystem\Filesystem')->disableOriginalConstructor()->getMock();
+        $mock = $this->getMockBuilder('Mazpaijo\Flysystem\Filesystem')->disableOriginalConstructor()->getMock();
         $mock->method('read')->with('file.ext')->willReturn('a result');
         $manager->mountFilesystem($schema, $mock);
         $this->assertEquals($manager->read($schema . '://file.ext'), 'a result');

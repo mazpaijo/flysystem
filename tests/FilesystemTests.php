@@ -1,9 +1,9 @@
 <?php
 
-use League\Flysystem\Config;
-use League\Flysystem\FileNotFoundException;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Util;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\FileNotFoundException;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Util;
 use Prophecy\Argument;
 use Prophecy\Argument\Token\TypeToken;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -43,11 +43,11 @@ class FilesystemTests extends TestCase
      */
     public function setupAdapter()
     {
-        $this->prophecy = $this->prophesize('League\\Flysystem\\AdapterInterface');
+        $this->prophecy = $this->prophesize('Mazpaijo\\Flysystem\\AdapterInterface');
         $this->adapter = $this->prophecy->reveal();
         $this->filesystemConfig = new Config();
         $this->filesystem = new Filesystem($this->adapter, $this->filesystemConfig);
-        $this->config = Argument::type('League\\Flysystem\\Config');
+        $this->config = Argument::type('Mazpaijo\\Flysystem\\Config');
     }
 
     public function testGetAdapter()
@@ -57,7 +57,7 @@ class FilesystemTests extends TestCase
 
     public function testGetConfig()
     {
-        $this->assertInstanceOf('League\\Flysystem\\Config', $this->filesystem->getConfig());
+        $this->assertInstanceOf('Mazpaijo\\Flysystem\\Config', $this->filesystem->getConfig());
     }
 
     public function testHas()
@@ -250,7 +250,7 @@ class FilesystemTests extends TestCase
 
     public function testDeleteDirRootViolation()
     {
-        $this->expectException('League\Flysystem\RootViolationException');
+        $this->expectException('Mazpaijo\Flysystem\RootViolationException');
         $this->filesystem->deleteDir('');
     }
 
@@ -324,14 +324,14 @@ class FilesystemTests extends TestCase
 
     public function testAssertPresentThrowsException()
     {
-        $this->expectException('League\Flysystem\FileExistsException');
+        $this->expectException('Mazpaijo\Flysystem\FileExistsException');
         $this->prophecy->has('path.txt')->willReturn(true);
         $this->filesystem->write('path.txt', 'contents');
     }
 
     public function testAssertAbsentThrowsException()
     {
-        $this->expectException('League\Flysystem\FileNotFoundException');
+        $this->expectException('Mazpaijo\Flysystem\FileNotFoundException');
         $this->prophecy->has('path.txt')->willReturn(false);
         $this->filesystem->read('path.txt');
     }
@@ -371,7 +371,7 @@ class FilesystemTests extends TestCase
         ]);
 
         $output = $this->filesystem->get($path);
-        $this->assertInstanceOf('League\Flysystem\File', $output);
+        $this->assertInstanceOf('Mazpaijo\Flysystem\File', $output);
     }
 
     public function testGetDirectory()
@@ -384,7 +384,7 @@ class FilesystemTests extends TestCase
         ]);
 
         $output = $this->filesystem->get($path);
-        $this->assertInstanceOf('League\Flysystem\Directory', $output);
+        $this->assertInstanceOf('Mazpaijo\Flysystem\Directory', $output);
     }
 
     public function testListContents()

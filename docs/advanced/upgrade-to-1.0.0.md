@@ -37,14 +37,14 @@ $filesystem = new Filesystem($adapter, $cacheAdapter);
 Install the required adapter decorator:
 
 ```bash
-composer require league/flysystem-cached-adapter
+composer require Mazpaijo/flysystem-cached-adapter
 ```
 
 And convert the bootstrapping to:
 
 ```php
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\Cached\CachedAdapter;
+use Mazpaijo\Flysystem\Adapter\Local;
+use Mazpaijo\Flysystem\Cached\CachedAdapter;
 
 $decoratedAdapter = new CachedAdapter($adapter, $cacheAdapter);
 $filesystem = new Filesystem($decoratedAdapter);

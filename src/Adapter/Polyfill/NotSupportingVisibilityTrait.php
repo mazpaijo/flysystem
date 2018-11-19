@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem\Adapter\Polyfill;
+namespace Mazpaijo\Flysystem\Adapter\Polyfill;
 
 use LogicException;
 

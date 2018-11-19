@@ -10,8 +10,8 @@ This adapter ships with Flysystem by default.
 ## Usage
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\Local;
 
 $adapter = new Local(__DIR__.'/path/to/root');
 $filesystem = new Filesystem($adapter);

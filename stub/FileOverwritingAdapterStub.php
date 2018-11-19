@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Stub;
+namespace Mazpaijo\Flysystem\Stub;
 
-use League\Flysystem\Adapter\CanOverwriteFiles;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
+use Mazpaijo\Flysystem\Adapter\CanOverwriteFiles;
+use Mazpaijo\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\Config;
 
 /**
  * @codeCoverageIgnore

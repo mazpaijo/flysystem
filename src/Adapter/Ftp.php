@@ -1,13 +1,13 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
 use ErrorException;
-use League\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
-use League\Flysystem\Util;
-use League\Flysystem\Util\MimeType;
+use Mazpaijo\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
+use Mazpaijo\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\Util;
+use Mazpaijo\Flysystem\Util\MimeType;
 use RuntimeException;
 
 class Ftp extends AbstractFtpAdapter

@@ -16,16 +16,16 @@ understands and re-format responses to comply with
 the interface of the generic file system.
 
 An adapter should __NEVER__ be used directly. It should
-__ONLY__ be used to create a `League\Flysystem\FilesystemInterface`
+__ONLY__ be used to create a `Mazpaijo\Flysystem\FilesystemInterface`
 implementation instance.
 
 ## The main interface to implement
 
 An adapter is required to be an implementation of
-`League\Flysystem\AdapterInterface`. This interface
+`Mazpaijo\Flysystem\AdapterInterface`. This interface
 dictates all the methods that need to be implemented.
 The interface of an adapter is similar to the
-`League\Flysystem\FilesystemInterface`, the method
+`Mazpaijo\Flysystem\FilesystemInterface`, the method
 names are the same, but the response is often different.
 
 Responses from adapters are often arrays containing the

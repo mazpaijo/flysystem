@@ -1,7 +1,7 @@
 <?php
 
 
-use League\Flysystem\Plugin\EmptyDir;
+use Mazpaijo\Flysystem\Plugin\EmptyDir;
 use PHPUnit\Framework\TestCase;
 
 class EmptyDirPluginTests extends TestCase
@@ -10,7 +10,7 @@ class EmptyDirPluginTests extends TestCase
 
     public function testPlugin()
     {
-        $filesystem = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $filesystem = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
         $plugin = new EmptyDir();
         $this->assertEquals('emptyDir', $plugin->getMethod());
         $plugin->setFilesystem($filesystem->reveal());

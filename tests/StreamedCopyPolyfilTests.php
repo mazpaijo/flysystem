@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Stub\StreamedCopyStub;
+use Mazpaijo\Flysystem\Stub\StreamedCopyStub;
 use PHPUnit\Framework\TestCase;
 
 class StreamedCopyPolyfilTests extends TestCase

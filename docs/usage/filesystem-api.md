@@ -269,7 +269,7 @@ param         | description               | type
 Visibility is the abstraction of file permissions across multiple platforms. Visibility can be either public or private.
 
 ```php
-use League\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\AdapterInterface;
 
 $filesystem->write($path, $contents, [
     'visibility' => AdapterInterface::VISIBILITY_PRIVATE
@@ -295,7 +295,7 @@ if ($filesystem->getVisibility($path) === 'private') {
 You can set the visibility as a default, which prevents you from setting it all over the place.
 
 ```php
-$filesystem = new League\Flysystem\Filesystem($adapter, [
+$filesystem = new Mazpaijo\Flysystem\Filesystem($adapter, [
     'visibility' => AdapterInterface::VISIBILITY_PRIVATE
 ]);
 ```

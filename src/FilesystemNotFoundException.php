@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem;
+namespace Mazpaijo\Flysystem;
 
 use LogicException;
 

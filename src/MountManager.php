@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem;
+namespace Mazpaijo\Flysystem;
 
 use InvalidArgumentException;
-use League\Flysystem\Plugin\PluggableTrait;
-use League\Flysystem\Plugin\PluginNotFoundException;
+use Mazpaijo\Flysystem\Plugin\PluggableTrait;
+use Mazpaijo\Flysystem\Plugin\PluginNotFoundException;
 
 /**
  * Class MountManager.

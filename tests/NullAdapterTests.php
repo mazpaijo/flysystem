@@ -1,8 +1,8 @@
 <?php
 
-use League\Flysystem\Adapter\NullAdapter;
-use League\Flysystem\Config;
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\NullAdapter;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\Filesystem;
 use PHPUnit\Framework\TestCase;
 
 class NullAdapterTest extends TestCase
@@ -31,7 +31,7 @@ class NullAdapterTest extends TestCase
     }
 
     /**
-     * @expectedException  \League\Flysystem\FileNotFoundException
+     * @expectedException  \Mazpaijo\Flysystem\FileNotFoundException
      */
     public function testRead()
     {

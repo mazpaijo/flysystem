@@ -10,14 +10,14 @@ This adapter keeps the filesystem completely in memory. This is useful when you 
 ## Installation
 
 ```bash
-composer require league/flysystem-memory
+composer require Mazpaijo/flysystem-memory
 ```
 
 ## Usage
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Memory\MemoryAdapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Memory\MemoryAdapter;
 
 $filesystem = new Filesystem(new MemoryAdapter());
 ```

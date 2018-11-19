@@ -1,7 +1,7 @@
 <?php
 
-use League\Flysystem\Adapter\Ftp;
-use League\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\Adapter\Ftp;
+use Mazpaijo\Flysystem\AdapterInterface;
 
 include_once __DIR__ . '/FtpIntegrationTestCase.php';
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Config;
-use League\Flysystem\FileNotFoundException;
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\FileNotFoundException;
+use Mazpaijo\Flysystem\Filesystem;
 use PHPUnit\Framework\TestCase;
 
 function fopen($result, $mode)
@@ -397,7 +397,7 @@ class LocalAdapterTests extends TestCase
     }
 
     /**
-     * @expectedException \League\Flysystem\NotSupportedException
+     * @expectedException \Mazpaijo\Flysystem\NotSupportedException
      */
     public function testLinkCausedUnsupportedException()
     {
@@ -439,7 +439,7 @@ class LocalAdapterTests extends TestCase
 
     public function testUnreadableFilesCauseAnError()
     {
-        $this->expectException('League\Flysystem\UnreadableFileException');
+        $this->expectException('Mazpaijo\Flysystem\UnreadableFileException');
 
         $adapter = new Local(__DIR__ . '/files/', LOCK_EX, Local::SKIP_LINKS);
         $reflection = new \ReflectionClass($adapter);
@@ -471,7 +471,7 @@ class LocalAdapterTests extends TestCase
     }
 
     /**
-     * @expectedException \League\Flysystem\Exception
+     * @expectedException \Mazpaijo\Flysystem\Exception
      */
     public function testRootDirectoryCreationProblemCausesAnError()
     {

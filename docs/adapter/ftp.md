@@ -10,8 +10,8 @@ This adapter ships with Flysystem by default.
 ## Usage
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Ftp as Adapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\Ftp as Adapter;
 
 $filesystem = new Filesystem(new Adapter([
     'host' => 'ftp.example.com',

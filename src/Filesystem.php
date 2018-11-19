@@ -1,11 +1,11 @@
 <?php
 
-namespace League\Flysystem;
+namespace Mazpaijo\Flysystem;
 
 use InvalidArgumentException;
-use League\Flysystem\Adapter\CanOverwriteFiles;
-use League\Flysystem\Plugin\PluggableTrait;
-use League\Flysystem\Util\ContentListingFormatter;
+use Mazpaijo\Flysystem\Adapter\CanOverwriteFiles;
+use Mazpaijo\Flysystem\Plugin\PluggableTrait;
+use Mazpaijo\Flysystem\Util\ContentListingFormatter;
 
 /**
  * @method array getWithMetadata(string $path, array $metadata)

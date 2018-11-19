@@ -1,16 +1,16 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
 use DirectoryIterator;
 use FilesystemIterator;
 use finfo as Finfo;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
-use League\Flysystem\Exception;
-use League\Flysystem\NotSupportedException;
-use League\Flysystem\UnreadableFileException;
-use League\Flysystem\Util;
+use Mazpaijo\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\Exception;
+use Mazpaijo\Flysystem\NotSupportedException;
+use Mazpaijo\Flysystem\UnreadableFileException;
+use Mazpaijo\Flysystem\Util;
 use LogicException;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;

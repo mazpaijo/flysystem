@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem\Util;
+namespace Mazpaijo\Flysystem\Util;
 
 use finfo;
 use ErrorException;

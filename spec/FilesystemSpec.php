@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\League\Flysystem;
+namespace spec\Mazpaijo\Flysystem;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -12,25 +12,25 @@ class FilesystemSpec extends ObjectBehavior
 
     public function let($adapter)
     {
-        $adapter->beADoubleOf('League\Flysystem\AdapterInterface');
+        $adapter->beADoubleOf('Mazpaijo\Flysystem\AdapterInterface');
         $this->adapter = $adapter;
         $this->beConstructedWith($adapter);
     }
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('League\Flysystem\Filesystem');
-        $this->shouldHaveType('League\Flysystem\FilesystemInterface');
+        $this->shouldHaveType('Mazpaijo\Flysystem\Filesystem');
+        $this->shouldHaveType('Mazpaijo\Flysystem\FilesystemInterface');
     }
 
     public function it_should_expose_an_adapter()
     {
-        $this->getAdapter()->shouldHaveType('League\Flysystem\AdapterInterface');
+        $this->getAdapter()->shouldHaveType('Mazpaijo\Flysystem\AdapterInterface');
     }
 
     public function it_should_delegate_plugin_calls($plugin)
     {
-        $plugin->beADoubleOf('League\Flysystem\Stub\PluginStub');
+        $plugin->beADoubleOf('Mazpaijo\Flysystem\Stub\PluginStub');
         $plugin->setFilesystem($this)->shouldBeCalled();
         $plugin->getMethod()->willReturn('pluginMethod');
         $plugin->handle()->shouldBeCalled();
@@ -41,7 +41,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_allow_writes()
     {
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->write('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->write('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
             'contents' => 'contents',
         ]);
@@ -52,7 +52,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->writeStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->writeStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
         ]);
 
@@ -75,7 +75,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_return_false_when_writing_to_a_existing_file()
     {
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->write('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn(false);
+        $this->adapter->write('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn(false);
         $this->write('file', 'contents')->shouldEqual(false);
     }
 
@@ -83,7 +83,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->writeStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn(false);
+        $this->adapter->writeStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn(false);
         $this->writeStream('file', $stream)->shouldEqual(false);
         fclose($stream);
     }
@@ -91,7 +91,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_forward_updates()
     {
         $this->adapter->has('file')->willReturn(true);
-        $this->adapter->update('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->update('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
             'contents' => 'contents',
         ]);
@@ -102,7 +102,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(true);
-        $this->adapter->updateStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->updateStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
         ]);
         $this->updateStream('file', $stream);
@@ -112,7 +112,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_write_when_putting_a_new_file()
     {
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->write('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->write('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
             'contents' => 'contents',
         ]);
@@ -123,7 +123,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->writeStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->writeStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
         ]);
         $this->putStream('file', $stream)->shouldReturn(true);
@@ -133,7 +133,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_update_when_putting_a_new_file()
     {
         $this->adapter->has('file')->willReturn(true);
-        $this->adapter->update('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->update('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
             'contents' => 'contents',
         ]);
@@ -144,7 +144,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(true);
-        $this->adapter->updateStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn($cache = [
+        $this->adapter->updateStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn($cache = [
             'path' => 'file',
         ]);
         $this->putStream('file', $stream)->shouldReturn(true);
@@ -154,7 +154,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_return_false_when_write_fails()
     {
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->write('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn(false);
+        $this->adapter->write('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn(false);
         $this->write('file', 'contents')->shouldReturn(false);
     }
 
@@ -162,7 +162,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(false);
-        $this->adapter->writeStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn(false);
+        $this->adapter->writeStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn(false);
         $this->writeStream('file', $stream)->shouldReturn(false);
         fclose($stream);
     }
@@ -170,7 +170,7 @@ class FilesystemSpec extends ObjectBehavior
     public function it_should_return_false_when_update_fails()
     {
         $this->adapter->has('file')->willReturn(true);
-        $this->adapter->update('file', 'contents', Argument::type('League\Flysystem\Config'))->willReturn(false);
+        $this->adapter->update('file', 'contents', Argument::type('Mazpaijo\Flysystem\Config'))->willReturn(false);
         $this->update('file', 'contents')->shouldReturn(false);
     }
 
@@ -178,7 +178,7 @@ class FilesystemSpec extends ObjectBehavior
     {
         $stream = tmpfile();
         $this->adapter->has('file')->willReturn(true);
-        $this->adapter->updateStream('file', $stream, Argument::type('League\Flysystem\Config'))->willReturn(false);
+        $this->adapter->updateStream('file', $stream, Argument::type('Mazpaijo\Flysystem\Config'))->willReturn(false);
         $this->updateStream('file', $stream)->shouldReturn(false);
         fclose($stream);
     }

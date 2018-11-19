@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem;
+namespace Mazpaijo\Flysystem;
 
-use League\Flysystem\Util\MimeType;
+use Mazpaijo\Flysystem\Util\MimeType;
 use LogicException;
 
 class Util

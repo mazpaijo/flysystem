@@ -1,7 +1,7 @@
 <?php
 
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
 /**
  * Adapters that implement this interface let the Filesystem know that it files can be overwritten using the write

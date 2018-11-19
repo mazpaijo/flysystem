@@ -8,14 +8,14 @@ title: SFTP Adapter
 ## Installation
 
 ```bash
-composer require league/flysystem-sftp
+composer require Mazpaijo/flysystem-sftp
 ```
 
 ## Usage
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Sftp\SftpAdapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Sftp\SftpAdapter;
 
 $filesystem = new Filesystem(new SftpAdapter([
     'host' => 'example.com',

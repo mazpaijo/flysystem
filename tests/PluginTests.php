@@ -1,9 +1,9 @@
 <?php
 
-use League\Flysystem\File;
-use League\Flysystem\Filesystem;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use Mazpaijo\Flysystem\File;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\PluginInterface;
 use PHPUnit\Framework\TestCase;
 
 class MyPlugin implements PluginInterface
@@ -63,7 +63,7 @@ class PluginTests extends TestCase
 
     public function setup()
     {
-        $this->filesystem = new Filesystem($this->createMock('League\Flysystem\AdapterInterface'));
+        $this->filesystem = new Filesystem($this->createMock('Mazpaijo\Flysystem\AdapterInterface'));
     }
 
     /**

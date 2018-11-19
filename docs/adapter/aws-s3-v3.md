@@ -11,15 +11,15 @@ title: Aws S3 Adapter V3
 ## Installation
 
 ```bash
-composer require league/flysystem-aws-s3-v3
+composer require Mazpaijo/flysystem-aws-s3-v3
 ```
 
 ## Usage
 
 ```php
 use Aws\S3\S3Client;
-use League\Flysystem\AwsS3v3\AwsS3Adapter;
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\AwsS3v3\AwsS3Adapter;
+use Mazpaijo\Flysystem\Filesystem;
 
 $client = S3Client::factory([
     'credentials' => [
@@ -88,15 +88,15 @@ $client = S3Client::factory([
 ## Installation
 
 ```bash
-composer require league/flysystem-aws-s3-v2
+composer require Mazpaijo/flysystem-aws-s3-v2
 ```
 
 ## Usage
 
 ```php
 use Aws\S3\S3Client;
-use League\Flysystem\AwsS3v2\AwsS3Adapter;
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\AwsS3v2\AwsS3Adapter;
+use Mazpaijo\Flysystem\Filesystem;
 
 $client = S3Client::factory([
     'key'    => '[your key]',

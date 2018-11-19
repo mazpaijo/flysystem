@@ -5,18 +5,18 @@ title: Mount Manager
 ---
 
 Flysystem comes with a wrapper class to easily work with multiple file system instances
-from a single object. The `League\Flysystem\MountManager` is an easy to use container allowing
+from a single object. The `Mazpaijo\Flysystem\MountManager` is an easy to use container allowing
 you to simplify more complex cross file system interactions.
 
 Setting up a Mount Manager is easy:
 
 ```php
-$ftp = new League\Flysystem\Filesystem($ftpAdapter);
-$s3 = new League\Flysystem\Filesystem($s3Adapter);
-$local = new League\Flysystem\Filesystem($localAdapter);
+$ftp = new Mazpaijo\Flysystem\Filesystem($ftpAdapter);
+$s3 = new Mazpaijo\Flysystem\Filesystem($s3Adapter);
+$local = new Mazpaijo\Flysystem\Filesystem($localAdapter);
 
 // Add them in the constructor
-$manager = new League\Flysystem\MountManager([
+$manager = new Mazpaijo\Flysystem\MountManager([
     'ftp' => $ftp,
     's3' => $s3,
 ]);

@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
-use League\Flysystem\Adapter\Polyfill\StreamedTrait;
-use League\Flysystem\Config;
+use Mazpaijo\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
+use Mazpaijo\Flysystem\Adapter\Polyfill\StreamedTrait;
+use Mazpaijo\Flysystem\Config;
 
 class NullAdapter extends AbstractAdapter
 {

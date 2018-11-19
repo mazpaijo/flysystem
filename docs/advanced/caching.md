@@ -10,7 +10,7 @@ Or enable per request caching (recommended).
 ## Installing the adapter cache decorator
 
 ```bash
-composer require league/flysystem-cached-adapter
+composer require Mazpaijo/flysystem-cached-adapter
 ```
 
 This package supplies an Adapter decorator which acts as a caching proxy.
@@ -24,10 +24,10 @@ This type of caching will cache everything in the lifetime of the current proces
 Setting it up is easy:
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local as Adapter;
-use League\Flysystem\Cached\CachedAdapter;
-use League\Flysystem\Cached\Storage\Memory as MemoryStore;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\Local as Adapter;
+use Mazpaijo\Flysystem\Cached\CachedAdapter;
+use Mazpaijo\Flysystem\Cached\Storage\Memory as MemoryStore;
 
 // Create the adapter
 $localAdapter = new Local('/path/to/root');
@@ -51,10 +51,10 @@ The following examples demonstrate how you can setup persistent meta-data cachin
 ## Predis Caching Setup
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local as Adapter;
-use League\Flysystem\Cached\CachedAdapter;
-use League\Flysystem\Cached\Storage\Predis as PredisStore;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\Local as Adapter;
+use Mazpaijo\Flysystem\Cached\CachedAdapter;
+use Mazpaijo\Flysystem\Cached\Storage\Predis as PredisStore;
 
 $adapter = new CachedAdapter(new Adapter(__DIR__.'/path/to/root'), new PredisStore);
 $filesystem = new Filesystem($adapter);
@@ -68,10 +68,10 @@ $filesystem = new Filesystem($adapter);
 ## Memcached Caching Setup
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local as Adapter;
-use League\Flysystem\Cached\CachedAdapter;
-use League\Flysystem\Cached\Storage\Memcached as MemcachedStore;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\Local as Adapter;
+use Mazpaijo\Flysystem\Cached\CachedAdapter;
+use Mazpaijo\Flysystem\Cached\Storage\Memcached as MemcachedStore;
 
 $memcached = new Memcached;
 $memcached->addServer('localhost', 11211);
@@ -88,11 +88,11 @@ $filesystem = new Filesystem($adapter);
 
 ```php
 use Dropbox\Client;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Dropbox;
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\Cached\CachedAdapter;
-use League\Flysystem\Cached\Storage\Adapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter\Dropbox;
+use Mazpaijo\Flysystem\Adapter\Local;
+use Mazpaijo\Flysystem\Cached\CachedAdapter;
+use Mazpaijo\Flysystem\Cached\Storage\Adapter;
 
 $client = new Client('token', 'app');
 $dropbox = new Dropbox($client, 'prefix');
@@ -107,9 +107,9 @@ $filesystem = new Filesystem($adapter);
 
 ```php
 use Stash\Pool;
-use League\Flysystem\Adapter\Local as Adapter;
-use League\Flysystem\Cached\CachedAdapter;
-use League\Flysystem\Cached\Storage\Stash as StashStore;
+use Mazpaijo\Flysystem\Adapter\Local as Adapter;
+use Mazpaijo\Flysystem\Cached\CachedAdapter;
+use Mazpaijo\Flysystem\Cached\Storage\Stash as StashStore;
 
 $pool = new Pool();
 // you can optionally pass a driver (recommended, default: in-memory driver)

@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace Mazpaijo\Flysystem\Plugin;
 
 class ListWith extends AbstractPlugin
 {

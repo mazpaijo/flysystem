@@ -10,8 +10,8 @@ will make extra calls to assert whether or not a file exists. This improves the 
 but also impacts performance. You can opt out of this behaviour.
 
 ```php
-use League\Flysystem\Config;
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\Filesystem;
 
 $local = new Filesystem($localAdapter, new Config([
     'disable_asserts' => true,

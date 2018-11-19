@@ -18,7 +18,7 @@ For this example we'll use the local adapter:
 ```php
 <?php
 
-use League\Flysystem\Adapter\Local;
+use Mazpaijo\Flysystem\Adapter\Local;
 
 $adapter = new Local(__DIR__.'/path/to/root/');
 ```
@@ -30,7 +30,7 @@ Now that you've got your adapter setup you can use it to create the filesystem:
 ```php
 <?php
 
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Filesystem;
 
 $filesystem = new Filesystem($adapter);
 ```
@@ -43,7 +43,7 @@ options can be provided in global configuration through the `Filesystem`.
 ```php
 <?php
 
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Filesystem;
 
 $filesystem = new Filesystem($adapter, ['visibility' => 'public']);
 ```

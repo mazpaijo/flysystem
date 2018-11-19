@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter\Polyfill;
+namespace Mazpaijo\Flysystem\Adapter\Polyfill;
 
-use League\Flysystem\Config;
+use Mazpaijo\Flysystem\Config;
 
 trait StreamedCopyTrait
 {

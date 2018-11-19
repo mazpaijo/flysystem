@@ -6,7 +6,7 @@ title: Provided Plugins
 
 ## List paths.
 
-This requires the `League\Flysystem\Plugin\ListPaths` plugin.
+This requires the `Mazpaijo\Flysystem\Plugin\ListPaths` plugin.
 
 
 ```php
@@ -20,7 +20,7 @@ foreach ($paths as $path) {
 
 ## List with ensured presence of specific metadata.
 
-This requires the `League\Flysystem\Plugin\ListWith` plugin.
+This requires the `Mazpaijo\Flysystem\Plugin\ListWith` plugin.
 
 ```php
 $filesystem->addPlugin(new ListWith);
@@ -33,7 +33,7 @@ foreach ($listing as $object) {
 
 ## Get file info with explicit metadata.
 
-This requires the `League\Flysystem\Plugin\GetWithMetadata` plugin.
+This requires the `Mazpaijo\Flysystem\Plugin\GetWithMetadata` plugin.
 
 ```php
 $info = $filesystem->getWithMetadata($path, ['timestamp', 'mimetype']);

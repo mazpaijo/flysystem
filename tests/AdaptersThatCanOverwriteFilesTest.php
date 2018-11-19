@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Filesystem;
-use League\Flysystem\Stub\FileOverwritingAdapterStub;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Stub\FileOverwritingAdapterStub;
 use PHPUnit\Framework\TestCase;
 
 class AdaptersThatCanOverwriteFilesTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Plugin\ListPaths;
+use Mazpaijo\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Plugin\ListPaths;
 use PHPUnit\Framework\TestCase;
 
 abstract class FtpIntegrationTestCase extends TestCase

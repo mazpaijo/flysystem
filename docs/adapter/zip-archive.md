@@ -8,14 +8,14 @@ title: ZipArchive Adapter
 ## Installation
 
 ```bash
-composer require league/flysystem-ziparchive
+composer require Mazpaijo/flysystem-ziparchive
 ```
 
 ## Usage
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\ZipArchive\ZipArchiveAdapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\ZipArchive\ZipArchiveAdapter;
 
 $filesystem = new Filesystem(new ZipArchiveAdapter(__DIR__.'/path/to/archive.zip'));
 ```

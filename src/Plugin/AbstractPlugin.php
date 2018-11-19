@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace Mazpaijo\Flysystem\Plugin;
 
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use Mazpaijo\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\PluginInterface;
 
 abstract class AbstractPlugin implements PluginInterface
 {

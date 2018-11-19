@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace Mazpaijo\Flysystem\Plugin;
 
-use League\Flysystem\FileExistsException;
-use League\Flysystem\FileNotFoundException;
+use Mazpaijo\Flysystem\FileExistsException;
+use Mazpaijo\Flysystem\FileNotFoundException;
 
 class ForcedCopy extends AbstractPlugin
 {

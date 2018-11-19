@@ -23,7 +23,7 @@ fclose($stream);
 
 namespace App\Http\Controllers;
 
-use League\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\FilesystemInterface;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Controller;
 

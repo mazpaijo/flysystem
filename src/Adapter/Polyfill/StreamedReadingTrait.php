@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem\Adapter\Polyfill;
+namespace Mazpaijo\Flysystem\Adapter\Polyfill;
 
 /**
  * A helper for adapters that only handle strings to provide read streams.
@@ -14,7 +14,7 @@ trait StreamedReadingTrait
      *
      * @return array|false
      *
-     * @see League\Flysystem\ReadInterface::readStream()
+     * @see Mazpaijo\Flysystem\ReadInterface::readStream()
      */
     public function readStream($path)
     {
@@ -38,7 +38,7 @@ trait StreamedReadingTrait
      *
      * @return array|false
      *
-     * @see League\Flysystem\ReadInterface::read()
+     * @see Mazpaijo\Flysystem\ReadInterface::read()
      */
     abstract public function read($path);
 }

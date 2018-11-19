@@ -7,8 +7,8 @@ title: Plugins
 Need a feature which is not included in Flysystem's bag of tricks? Write a plugin!
 
 ```php
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use Mazpaijo\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\PluginInterface;
 
 class MaximusAwesomeness implements PluginInterface
 {
@@ -36,8 +36,8 @@ class MaximusAwesomeness implements PluginInterface
 Now we're ready to use the plugin
 
 ```php
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter;
+use Mazpaijo\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\Adapter;
 
 $filesystem = new Filesystem(new Adapter\Local(__DIR__.'/path/to/files/'));
 $filesystem->addPlugin(new MaximusAwesomeness);

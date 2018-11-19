@@ -8,14 +8,14 @@ title: Azure Blob Storage
 ## Installation
 
 ```bash
-composer require league/flysystem-azure-blob-storage
+composer require Mazpaijo/flysystem-azure-blob-storage
 ```
 
 ## Usage
 
 ```php
-use League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;
-use League\Flysystem\Filesystem;
+use Mazpaijo\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;
+use Mazpaijo\Flysystem\Filesystem;
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 
 include __DIR__.'/vendor/autoload.php';

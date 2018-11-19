@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Config;
+use Mazpaijo\Flysystem\Config;
 use PHPUnit\Framework\TestCase;
 
 class FtpdTests extends TestCase
@@ -74,6 +74,6 @@ class FtpdTests extends TestCase
     public function testSynologyFtpLegacyClassName()
     {
         $adapter = new SynologyFtp($this->options);
-        $this->assertInstanceOf('League\Flysystem\Adapter\Ftpd', $adapter);
+        $this->assertInstanceOf('Mazpaijo\Flysystem\Adapter\Ftpd', $adapter);
     }
 }

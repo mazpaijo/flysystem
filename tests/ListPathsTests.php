@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Plugin\ListPaths;
+use Mazpaijo\Flysystem\Plugin\ListPaths;
 use PHPUnit\Framework\TestCase;
 
 class ListPathsTests extends TestCase
@@ -15,7 +15,7 @@ class ListPathsTests extends TestCase
      */
     public function setupFilesystem()
     {
-        $this->filesystem = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $this->filesystem = $this->prophesize('Mazpaijo\Flysystem\FilesystemInterface');
         $this->actualFilesystem = $this->filesystem->reveal();
     }
 

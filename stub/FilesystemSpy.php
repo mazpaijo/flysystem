@@ -1,14 +1,14 @@
 <?php
 
-namespace League\Flysystem\Stub;
+namespace Mazpaijo\Flysystem\Stub;
 
 use InvalidArgumentException;
-use League\Flysystem\FileExistsException;
-use League\Flysystem\FileNotFoundException;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\Handler;
-use League\Flysystem\Plugin\PluggableTrait;
-use League\Flysystem\RootViolationException;
+use Mazpaijo\Flysystem\FileExistsException;
+use Mazpaijo\Flysystem\FileNotFoundException;
+use Mazpaijo\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\Handler;
+use Mazpaijo\Flysystem\Plugin\PluggableTrait;
+use Mazpaijo\Flysystem\RootViolationException;
 
 class FilesystemSpy implements FilesystemInterface
 {

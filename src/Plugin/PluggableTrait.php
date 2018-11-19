@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace Mazpaijo\Flysystem\Plugin;
 
 use BadMethodCallException;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use Mazpaijo\Flysystem\FilesystemInterface;
+use Mazpaijo\Flysystem\PluginInterface;
 use LogicException;
 
 trait PluggableTrait

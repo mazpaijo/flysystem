@@ -14,6 +14,6 @@ Comes with the main Flysystem package.
 Acts like `/dev/null`
 
 ```php
-$adapter = new League\Flysystem\Adapter\NullAdapter;
-$filesystem = new League\Flysystem\Filesystem($adapter);
+$adapter = new Mazpaijo\Flysystem\Adapter\NullAdapter;
+$filesystem = new Mazpaijo\Flysystem\Filesystem($adapter);
 ```

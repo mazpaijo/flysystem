@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Adapter\Polyfill;
+namespace Mazpaijo\Flysystem\Adapter\Polyfill;
 
-use League\Flysystem\Config;
-use League\Flysystem\Util;
+use Mazpaijo\Flysystem\Config;
+use Mazpaijo\Flysystem\Util;
 
 trait StreamedWritingTrait
 {

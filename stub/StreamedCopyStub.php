@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Stub;
+namespace Mazpaijo\Flysystem\Stub;
 
-use League\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
-use League\Flysystem\Config;
+use Mazpaijo\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
+use Mazpaijo\Flysystem\Config;
 
 class StreamedCopyStub
 {

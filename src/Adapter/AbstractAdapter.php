@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\AdapterInterface;
+use Mazpaijo\Flysystem\AdapterInterface;
 
 abstract class AbstractAdapter implements AdapterInterface
 {

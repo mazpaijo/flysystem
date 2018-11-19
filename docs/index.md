@@ -12,7 +12,7 @@ redirect_from: /
 [![Build Status](//img.shields.io/travis/thephpleague/flysystem/master.svg?style=flat-square)](//travis-ci.org/thephpleague/flysystem)
 [![Coverage Status](//img.shields.io/scrutinizer/coverage/g/thephpleague/flysystem.svg?style=flat-square)](//scrutinizer-ci.com/g/thephpleague/flysystem/code-structure)
 [![Quality Score](//img.shields.io/scrutinizer/g/thephpleague/flysystem.svg?style=flat-square)](//scrutinizer-ci.com/g/thephpleague/flysystem)
-[![Total Downloads](//img.shields.io/packagist/dt/league/flysystem.svg?style=flat-square)](//packagist.org/packages/league/flysystem)
+[![Total Downloads](//img.shields.io/packagist/dt/Mazpaijo/flysystem.svg?style=flat-square)](//packagist.org/packages/Mazpaijo/flysystem)
 ![php 5.5.9+](//img.shields.io/badge/php-min%205.5.9-red.svg?style=flat-square)
 
 ## About Flysystem

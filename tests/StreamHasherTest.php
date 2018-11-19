@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Mazpaijo\Flysystem\Adapter;
 
-use League\Flysystem\Util\StreamHasher;
+use Mazpaijo\Flysystem\Util\StreamHasher;
 use PHPUnit\Framework\TestCase;
 
 class StreamHasherTest extends TestCase
